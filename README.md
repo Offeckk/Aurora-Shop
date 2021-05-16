@@ -1,2 +1,3 @@
-# AuroraShop
- A simple online shop for clothes
+==== Aurora Fashion ====
+
+One very simple shopping site.
