@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Korzh.EasyQuery.Linq" Version="7.0.5" />
+    <PackageReference Include="Stripe.net" Version="39.39.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\AS.Data.Models\AS.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\AS.Data\AS.Data.csproj" />
+    <ProjectReference Include="..\..\Web\AS.Web.Models\AS.Web.Models.csproj" />
+    <ProjectReference Include="..\AS.Services.Models\AS.Services.Models.csproj" />
+  </ItemGroup>
+
+</Project>

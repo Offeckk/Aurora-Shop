@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.4" />
+    <PackageReference Include="Stripe.net" Version="39.39.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\AutoMapperConfiguration\AutoMapperConfiguration.csproj" />
+    <ProjectReference Include="..\..\Data\AS.Data.Models\AS.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Service\AS.Services.Models\AS.Services.Models.csproj" />
+  </ItemGroup>
+
+</Project>

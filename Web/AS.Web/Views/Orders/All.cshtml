@@ -1,0 +1,141 @@
+﻿@model List<OrderAllViewModel>
+
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
+    <style>
+        h1.text-center {
+            position: relative;
+            left: 600px;
+            display: inline;
+        }
+
+        .begin {
+            position: relative;
+            left: 50px;
+        }
+
+        .order_id {
+            position: relative;
+            left: 150px;
+        }
+
+        .orderer {
+            position: relative;
+            left: 300px;
+        }
+
+        .product {
+            position: relative;
+            left: 400px;
+        }
+
+        .ordered_on {
+            position: relative;
+            left: 500px;
+        }
+
+        .begin2 {
+            position: relative;
+            left: 50px;
+        }
+
+        .order_id2 {
+            position: relative;
+            left: 150px;
+        }
+
+        .orderer2 {
+            position: relative;
+            left: 300px;
+        }
+
+        .product2 {
+            position: relative;
+            left: 400px;
+        }
+
+        .ordered_on2 {
+            position: relative;
+            left: 500px;
+        }
+
+        /*.input {
+            position: relative;
+            bottom: 410px;
+            left: 680px;
+            border: none;
+            letter-spacing: .15em;
+            font-family: monospace;
+            width: 138px;
+            outline: none;
+        }
+
+        .btn {
+            position: relative;
+            bottom: 410px;
+            left: 675px;
+            border: none;
+            background-color: white;
+        }*/
+
+        .input {
+            position: relative;
+            bottom: 252px;
+            left: 680px;
+            border: none;
+            letter-spacing: .15em;
+            font-family: monospace;
+            width: 138px;
+            outline: none;
+        }
+
+        .btn {
+            position: relative;
+            bottom: 252px;
+            left: 655px;
+            border: none;
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+@* search *@
+<form method="post" asp-controller="Orders" asp-action="All">
+    <div class="row form-group">
+        <input type="text" class="form-control input" name="searchText" id="searchText" placeholder="Search Orders">
+        <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+    </div>
+</form>
+@* end search *@
+
+<div class="mt-3 mb-5">
+    <h1 class="text-center">All Orders</h1>
+    <table class="table w-75 mx-auto table-hover">
+        <thead>
+            <tr class="row">
+                <th class="col-md-1 begin">#</th>
+                <th class="col-md-4 order_id">Order ID</th>
+                <th class="col-md-2 orderer">Orderer</th>
+                <th class="col-md-2 product">Product</th>
+                <th class="col-md-2 ordered_on">Ordered On</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr class="row">
+                    <th class="col-md-1 begin2">@(i + 1)</th>
+                    <td class="col-md-4 order_id2">@Model[i].Id</td>
+                    <td class="col-md-2 orderer2">@Model[i].Orderer</td>
+                    <td class="col-md-2 product2">@Model[i].Product</td>
+                    <td class="col-md-2 ordered_on2">@Model[i].OrderedOn</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
